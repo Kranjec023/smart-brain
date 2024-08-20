@@ -10,10 +10,10 @@ import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
 
 /* Clarifai */
-const PAT = '1044ef379ea44009a87b52bcc696ee62';
-const USER_ID = 'kranjec023';       
-const APP_ID = 'my-first-application-sbkog';
-const MODEL_ID = 'face-detection';
+const PAT = process.env.CLARIFAI_PAT;
+const USER_ID = process.env.U_ID;       
+const APP_ID = process.env.A_ID;
+const MODEL_ID = process.env.M_ID;
 
 const setupClarifai = (imageUrl) => {
     const raw = JSON.stringify({
